@@ -1,8 +1,18 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from '../src/generated/prisma/client.ts'
+import { PrismaPg } from '@prisma/adapter-pg'
+import "dotenv/config";
 
-const prisma = new PrismaClient();
 
-const userId = "bed29a3e-8386-4506-b44b-8fd7fb886c23";
+const adapter = new PrismaPg({
+    connectionString: process.env.DATABASE_URL,
+  })
+
+  const prisma = new PrismaClient({
+    adapter,
+  })
+
+
+const userId = "ceb365d7-5952-49b7-a0a5-266728cb280a";
 
 const movies = [
   {

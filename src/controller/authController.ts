@@ -1,7 +1,7 @@
 import type { Request, Response} from 'express'
-import {prisma} from "../config/db.ts"
+import {prisma} from "../config/db.js"
 import bcrypt from "bcryptjs"
-import { generateToken } from '../utils/generateToken.ts';
+import { generateToken } from '../utils/generateToken.js';
 
 
 

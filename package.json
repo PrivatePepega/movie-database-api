@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --watch src --ext ts --exec tsx src/server.ts"
+    "dev": "nodemon --watch src --ext ts --exec tsx src/server.ts",
+    "seed:movies": "node prisma/seed.ts"
+
   },
   "keywords": [],
   "author": "",
