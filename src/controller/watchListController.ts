@@ -2,6 +2,7 @@
 
 import type { Request, Response} from 'express'
 import {prisma} from "../config/db.js"
+import type { Prisma } from "../generated/prisma/client.js";
 
 
 interface UpdateData {
@@ -83,7 +84,7 @@ const updateWatchlistItem = async (req:Request, res:Response) => {
     }
   
     // Build update data
-    const updateData: UpdateData = {};
+    const updateData : Prisma.WatchlistItemUpdateInput = {};
     if (status !== undefined) updateData.status = status.toUpperCase();
     if (rating !== undefined) updateData.rating = rating;
     if (notes !== undefined) updateData.notes = notes;

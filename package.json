@@ -8,7 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch src --ext ts --exec tsx src/server.ts",
     "seed:movies": "node prisma/seed.ts"
-
   },
   "keywords": [],
   "author": "",
@@ -20,10 +19,12 @@
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
-    "pg": "^8.22.0"
+    "pg": "^8.22.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^26.1.2",
     "nodemon": "^3.1.14",
     "prisma": "^7.9.1",
